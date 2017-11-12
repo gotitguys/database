@@ -1,0 +1,2 @@
+2017-04-23 20:31:02 PDT FATAL:  lock file "postmaster.pid" already exists
+2017-04-23 20:31:02 PDT HINT:  Is another postmaster (PID 109) running in data directory "/Library/PostgreSQL/9.6/data"?
