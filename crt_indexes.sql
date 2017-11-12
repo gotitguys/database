@@ -32,18 +32,18 @@ CREATE [ UNIQUE ] INDEX [ CONCURRENTLY ] [ [ IF NOT EXISTS ] name ] ON table_nam
 --CREATE TABLESPACE tbsp_idx_gradebook  OWNER gradebook
 --LOCATION '/Library/PostgreSQL/data/gradebook_idx';
 
-DROP   INDEX  IF  EXISTS     idx_students_lastname;
-CREATE INDEX   IF NOT EXISTS idx_students_lastname
-	ON students(lastname)
+DROP   INDEX  IF  EXISTS     idx_Customer_Lname;
+CREATE INDEX   IF NOT EXISTS idx_Customer_Lname
+	ON Customer(Lname)
 --	TABLESPACE tbsp_idx_gradebook
 ;
-DROP   INDEX IF EXIStS       idx_students_firstname ;
-CREATE INDEX IF NOT EXISTS   idx_students_firstname
-	ON students(firstname)
+DROP   INDEX IF EXIStS       idx_Customer_Fname ;
+CREATE INDEX IF NOT EXISTS   idx_Customer_Fname
+	ON Customer(Fname)
 --	TABLESPACE tbsp_idx_gradebook
 ;
-DROP          INDEX IF EXISTS      idx_classes_YQSN;
-CREATE UNIQUE INDEX IF NOT EXISTS  idx_classes_YQSN
-	ON classes(year, quarter, CName, section)
+DROP          INDEX IF EXISTS      idx_Orders_num;
+CREATE UNIQUE INDEX IF NOT EXISTS  idx_Orders_num
+	ON Orders(Datee, Order_num)
 --	TABLESPACE tbsp_idx_gradebook
 ;
