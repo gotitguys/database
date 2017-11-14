@@ -1,4 +1,4 @@
-INSERT INTO customer(Customer_id, Fname, Middle_init, Lname, Pword, Email,
+NSERT INTO customer(Customer_id, Fname, Middle_init, Lname, Pword, Email,
 phone, Order_num, Card_num)
   VALUES('2000000', 'Luis', 'R', 'Breeland', 'Password21',
 'Luis.breeland@gmail.com', '7188319952', '1000000', '4342562220704736' );
