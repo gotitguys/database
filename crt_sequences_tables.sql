@@ -15,36 +15,35 @@ CREATE TABLE IF NOT EXISTS Orders (
         Order_num     SERIAL NOT NULL,
         Datee         date NOT NULL,
         Time          time NOT NULL,
-        Tax_rate      double precision NOT NULL,
-        Card_num      integer NOT NULL,
+        Tax_rate      double precision  NULL,
+        Card_num      BIGINT NOT NULL,
         cutomer_id    serial NOT Null 
-    PRIMARY KEY (Order_num);
      ) ;
 CREATE TABLE IF NOT EXISTS Payment (
-        Card_num      integer NOT NULL,
-        Fname         VARCHAR(15) NOT NULL,
-        Middle_init   VARCHAR(1) NOT NULL,
-        Lname         VARCHAR(20) NOT NULL,
+        Card_num      BIGINT NOT NULL,
+        Fname         VARCHAR(25) NOT NULL,
+        Middle_init   VARCHAR(3) NOT NULL,
+        Lname         VARCHAR(30) NOT NULL,
         Experation    integer NOT NULL,    
         Cvc           integer NOT NULL,  
-        Type          VARCHAR(15) NOT NULL,
+        Type          VARCHAR(25) NOT NULL,
         Street_no     integer NOT NULL,  
-        Street        VARCHAR(15) NOT NULL,
+        Street        VARCHAR(25) NOT NULL,
         zip           integer NOT NULL,  
-        city          VARCHAR(15) NOT NULL,
-        state         VARCHAR(02) NOT NULL,
+        city          VARCHAR(25) NOT NULL,
+        state         VARCHAR(3) NOT NULL,
         order_num     SERIAL NOT NULL  
      );
  CREATE TABLE IF NOT EXISTS Customer (
         Customer_id   SERIAL NOT NULL,        
         Fname         VARCHAR(15) NOT NULL,
-        Middle_init   VARCHAR(1) NOT NULL,
+        Middle_init   VARCHAR(1)  NULL,
         Lname         VARCHAR(20) NOT NULL,
         Pword         VARCHAR(8) NOT NULL,
         Email         VARCHAR(255) NOT NULL,
-        phone         integer NOT NULL,
+        phone         BIGINT NOT NULL,
         Order_num     SERIAL NOT NULL,  
-        Card_num      integer NOT NULL
+        Card_num      BIGINT NOT NULL
 	);
  CREATE TABLE IF NOT EXISTS  Address(
         Street_no     integer NOT NULL,  
@@ -53,6 +52,7 @@ CREATE TABLE IF NOT EXISTS Payment (
         city          VARCHAR(15) NOT NULL,
         state         VARCHAR(02) NOT NULL,
         order_num     SERIAL NOT NULL,  
+        Type          VARCHAR(15) NOT NULL,
         Customer_id   SERIAL NOT NULL  
      );
 
@@ -69,7 +69,6 @@ CREATE TABLE  IF NOT EXISTS Updates (
 CREATE TABLE  IF NOT EXISTS Contains (
         Qty_sold      integer NOT NULL,  
         Datee         date NOT NULL,
-        Time          time NOT NULL,
         S_price       double precision NOT NULL,
         order_num     SERIAL NOT NULL, 
         P_id          integer NOT NULL 
@@ -91,10 +90,10 @@ CREATE TABLE  IF NOT EXISTS Products (
      );
 CREATE TABLE  IF NOT EXISTS Distributors(
         D_id            SERIAL NOT NULL,     
-        Company_name    VARCHAR(15) NOT NULL,
-        Home_page       VARCHAR(15) NOT NULL,
-        Phone           Integer NOT NULL,
-        Fax             Integer NOT NULL,
+        Company_name    VARCHAR(65) NOT NULL,
+        Home_page       VARCHAR(75) NOT NULL,
+        Phone           BIGINT NOT NULL,
+        Fax             BIGINT NOT NULL,
         P_id            integer NOT NULL 
      );
 CREATE TABLE  IF NOT EXISTS P_order(
