@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS Payment (
         Fname         VARCHAR(15) NOT NULL,
         Middle_init   VARCHAR(1)  NULL,
         Lname         VARCHAR(20) NOT NULL,
-        Pword         VARCHAR(8) NOT NULL,
+        Pword         VARCHAR(10) NOT NULL,
         Email         VARCHAR(255) NOT NULL,
         phone         BIGINT NOT NULL,
         Order_num     SERIAL NOT NULL,  
@@ -83,8 +83,8 @@ CREATE TABLE  IF NOT EXISTS Recieves (
 CREATE TABLE  IF NOT EXISTS Products (
         P_id          integer NOT NULL, 
         Category      VARCHAR(15) NOT NULL,
-        P_name        VARCHAR(15) NOT NULL,
-        S_price       Decimal NOT NULL,
+        P_name        VARCHAR(100) NOT NULL,
+        S_price       double precision NOT NULL,
         P_price       double precision NOT NULL,
         D_id          SERIAL NOT NULL      
      );
