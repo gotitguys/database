@@ -1,4 +1,4 @@
-NSERT INTO status(S_id, State)
+INSERT INTO status(S_id, State)
   VALUES('72253846','placed');
 INSERT INTO status(S_id, State)
   VALUES('72215368','placed');
