@@ -103,6 +103,7 @@ CREATE TABLE  IF NOT EXISTS P_order(
 CREATE TABLE  IF NOT EXISTS Inventory (
         Qty_order     integer NOT NULL,  
         Qty_sold      integer NOT NULL,  
-        Qty_lost      integer NOT NULL  
+        Qty_lost      integer NOT NULL,  
+        P_id          integer NOT NULL 
      );
 
