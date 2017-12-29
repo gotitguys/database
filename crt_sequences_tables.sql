@@ -41,9 +41,7 @@ CREATE TABLE IF NOT EXISTS Payment (
         Lname         VARCHAR(20) NOT NULL,
         Pword         VARCHAR(10) NOT NULL,
         Email         VARCHAR(255) NOT NULL,
-        phone         BIGINT NOT NULL,
-        Order_num     SERIAL NOT NULL,  
-        Card_num      BIGINT NOT NULL
+	Phone 	      BIGINT 	   NOT NULL        
 	);
  CREATE TABLE IF NOT EXISTS  Address(
         Street_no     integer NOT NULL,  
